@@ -144,7 +144,7 @@ def main():
         prog_bar = torchie.ProgressBar(len(data_loader.dataset) // cfg.gpus)
 
     detections = {}
-    cpu_device = torch.device("cpu")
+    cpu_device = 'cuda' if torch.cuda.is_available() else 'cpu' #torch.device("cpu")
 
     start = time.time()
 

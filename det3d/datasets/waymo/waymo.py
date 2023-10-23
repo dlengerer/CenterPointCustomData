@@ -17,7 +17,7 @@ from det3d.datasets.registry import DATASETS
 
 @DATASETS.register_module
 class WaymoDataset(PointCloudDataset):
-    NumPointFeatures = 5  # x, y, z, intensity, elongation
+    NumPointFeatures = 4  # x, y, z, intensity, elongation
 
     def __init__(
         self,

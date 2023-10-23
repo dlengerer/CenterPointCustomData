@@ -22,6 +22,7 @@ def create_groundtruth_database(
     dbinfo_path=None,
     relative_path=True,
     virtual=False,
+    randomlySample=True,
     **kwargs,
 ):
     pipeline = [
@@ -39,7 +40,7 @@ def create_groundtruth_database(
             pipeline=pipeline,
             test_mode=True,
             nsweeps=kwargs["nsweeps"],
-            virtual=virtual
+            virtual=virtual,
         )
         nsweeps = dataset.nsweeps
     else:
@@ -85,7 +86,7 @@ def create_groundtruth_database(
         gt_boxes = annos["boxes"]
         names = annos["names"]
 
-        if dataset_class_name == 'WAYMO':
+        if dataset_class_name == 'WAYMO' and randomlySample:
             # waymo dataset contains millions of objects and it is not possible to store
             # all of them into a single folder
             # we randomly sample a few objects for gt augmentation

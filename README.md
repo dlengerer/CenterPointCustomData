@@ -1,3 +1,7 @@
+# Changes in this fork
+
+This fork has been adjusted only to use four features of the waymo dataset (x, y, z, intensity). How to format custom data to be used in place of the waymo dataset is also explained [fork_specific](docs/FORK_SPECIFICS.md). 
+
 # Center-based 3D Object Detection and Tracking
 
 3D Object Detection and Tracking using center points in the bird-eye view.

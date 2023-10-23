@@ -75,7 +75,7 @@ def read_single_waymo(obj):
     # normalize intensity 
     points_feature[:, 0] = np.tanh(points_feature[:, 0])
 
-    points = np.concatenate([points_xyz, points_feature], axis=-1)
+    points = np.concatenate([points_xyz, points_feature], axis=-1)[:, :4]
     
     return points 
 

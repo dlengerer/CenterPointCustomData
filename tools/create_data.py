@@ -19,7 +19,7 @@ def nuscenes_data_prep(root_path, version, nsweeps=10, filter_zero=True, virtual
             virtual=virtual
         )
 
-def waymo_data_prep(root_path, split, nsweeps=1):
+def waymo_data_prep(root_path, split, nsweeps=1, randomlySample=True):
     waymo_ds.create_waymo_infos(root_path, split=split, nsweeps=nsweeps)
     if split == 'train': 
         create_groundtruth_database(
@@ -27,7 +27,8 @@ def waymo_data_prep(root_path, split, nsweeps=1):
             root_path,
             Path(root_path) / "infos_train_{:02d}sweeps_filter_zero_gt.pkl".format(nsweeps),
             used_classes=['VEHICLE', 'CYCLIST', 'PEDESTRIAN'],
-            nsweeps=nsweeps
+            nsweeps=nsweeps,
+            randomlySample=randomlySample
         )
     
 
