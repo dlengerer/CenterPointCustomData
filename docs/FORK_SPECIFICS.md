@@ -10,7 +10,7 @@ added [:, :4] to cut the fifth feature when loading a waymo frame \
 https://github.com/dlengerer/CenterPointCustomData/blob/7876b5926602fea5b6aa526d8a2ba379ddd237e6/det3d/datasets/pipelines/loading.py#L78
 
 added a variable "randomlySample" to toggle the sampling of pedestrians and vehicles: \
-https://github.com/dlengerer/CenterPointCustomData/blob/7876b5926602fea5b6aa526d8a2ba379ddd237e6/det3d/datasets/utils/create_gt_database.py#L89C1-L104C42 \
+https://github.com/dlengerer/CenterPointCustomData/blob/7876b5926602fea5b6aa526d8a2ba379ddd237e6/det3d/datasets/utils/create_gt_database.py#L89-L104 \
 The variable is set to the original behavior of sampling the objects. It can be deactivated by using: \
 ```
 python tools/create_data.py waymo_data_prep --root_path=data/Waymo --split train --nsweeps=1 --randomlySample=False
