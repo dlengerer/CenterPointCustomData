@@ -42,7 +42,7 @@ def save_pcl(x, y, z, intensity, seq_id, frame_id):
 ```
 
 The annotations bounding boxes need to be in the waymo coordinates as described here: \
-https://github.com/dlengerer/CenterPoint/blob/7876b5926602fea5b6aa526d8a2ba379ddd237e6/det3d/datasets/waymo/waymo_common.py#L266-L268
+https://github.com/dlengerer/CenterPointCustomData/blob/7876b5926602fea5b6aa526d8a2ba379ddd237e6/det3d/datasets/waymo/waymo_common.py#L266-L268
 
 For each object, an object dictionary has to be created, and all these object dictionaries are collected in a list:
 
